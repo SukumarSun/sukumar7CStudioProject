@@ -1,0 +1,62 @@
+/* Write your CSS code here */
+* {
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.outside {
+  padding: 10px;
+  background-color: black;
+  min-width: 100vw;
+
+  color: white;
+}
+
+.inside {
+  display: flex;
+  flex-direction: column;
+}
+
+.down-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  display: flex;
+  margin-bottom: -15px;
+  justify-content: flex-start;
+}
+
+.down-left,
+.down-right {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+}
+
+.left-logo {
+  margin: 10px;
+  background-color: yellowgreen;
+}
+
+.right-logo {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+  border-radius: 30px;
+  height: 40px;
+  width: 40px;
+}
+
+.font-change {
+  font-size: 12px;
+}
+
+.title {
+  font-size: 20px;
+  padding: 0px 10px;
+  font-weight: bold;
+}

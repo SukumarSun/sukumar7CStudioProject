@@ -1,0 +1,35 @@
+.sidebar-outside {
+  width: 200px;
+  min-height: 100vh;
+  border: 1px solid grey;
+}
+
+.each-head {
+  font-size: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.opt {
+  color: black;
+  padding: 5px 5px 5px 25px;
+}
+
+.opt:hover {
+  color: rgb(206, 28, 28);
+  background-color: rgb(102, 255, 0);
+}
+
+@media screen and (max-width: 576px) {
+  .sidebar-outside {
+    width: 70px;
+  }
+
+  .opt {
+    padding: 4px 1px 1px 8px;
+  }
+
+  h1 {
+    font-size: 8px;
+  }
+}
