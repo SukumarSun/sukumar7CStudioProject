@@ -2,42 +2,75 @@
 * {
   box-sizing: border-box;
   padding: 0px;
+  color: black;
+}
+
+.logo1 {
+  height: 18px;
 }
 
 .outside {
   padding: 10px;
-  background-color: black;
-  min-width: 100vw;
+  padding-bottom: 0px;
+  border-bottom: 1px solid grey;
+  /* background-color: black; */
 
   color: white;
 }
 
 .inside {
   display: flex;
+  /* width: 100%; */
   flex-direction: column;
 }
 
 .down-header {
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
 }
 
 .heading {
   display: flex;
-  margin-bottom: -15px;
+  /* background-color: red; */
+
   justify-content: flex-start;
+}
+
+.top-head {
+  margin-left: 10px;
+  margin-bottom: -10px;
+  margin-top: 10px;
+  background-color: white;
 }
 
 .down-left,
 .down-right {
   display: flex;
   font-size: 12px;
+  margin-top: 5px;
   align-items: center;
 }
 
 .left-logo {
-  margin: 10px;
-  background-color: yellowgreen;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 576px) {
+  .logo1 {
+    height: 14px;
+  }
+
+  .down-left,
+  .down-right {
+    margin-top: 2px;
+  }
+}
+
+.hello {
+  margin-left: -12px;
 }
 
 .right-logo {
@@ -45,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   border-radius: 30px;
   height: 40px;
   width: 40px;
@@ -53,10 +86,54 @@
 
 .font-change {
   font-size: 12px;
+  margin-left: 5px;
 }
 
 .title {
   font-size: 20px;
   padding: 0px 10px;
   font-weight: bold;
+}
+
+.logojohn {
+  width: 40px;
+  height: 40px;
+  /* border: 2px solid red; */
+  border-radius: 30px;
+}
+
+.birde {
+  margin-left: -7px;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 16px;
+  }
+
+  /* .right-logo {
+    margin: 3px;
+    width: 50px;
+    height: 50px;
+  }
+
+  /*  */
+
+  .logojohn {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 30px;
+  }
+
+  .left-logo {
+    margin: 3px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .hello {
+    margin-left: -10px;
+  }
 }

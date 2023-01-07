@@ -8,7 +8,7 @@ const Products = () => (
     <div className="bottom">
       <SideBar />
       <div className="bottom-right">
-        <h1>Products</h1>
+        <h1 className="custom">Products</h1>
       </div>
     </div>
   </div>

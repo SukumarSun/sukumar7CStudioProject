@@ -8,7 +8,7 @@ const Demos = () => (
     <div className="bottom">
       <SideBar />
       <div className="bottom-right">
-        <h1>Demos</h1>
+        <h1 className="custom">Demos</h1>
       </div>
     </div>
   </div>

@@ -8,7 +8,7 @@ const SalesTeam = () => (
     <div className="bottom">
       <SideBar />
       <div className="bottom-right">
-        <h1>Sales Team</h1>
+        <h1 className="custom">Sales Team</h1>
       </div>
     </div>
   </div>

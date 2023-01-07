@@ -2,7 +2,7 @@ import {Route, Switch} from 'react-router-dom'
 import Customers from './components/Customers'
 import Products from './components/Products'
 import Settings from './components/Settings'
-import Home from './components/Home'
+
 import './App.css'
 import Demos from './components/Demos'
 import NotFound from './components/NotFound'
@@ -12,7 +12,6 @@ import SalesTeam from './components/SalesTeam'
 const App = () => (
   <div className="App">
     <Switch>
-      <Route exact path="/" component={Home} />
       <Route exact path="/customers" component={Customers} />
       <Route exact path="/demo-script" component={DemoScript} />
       <Route exact path="/demos" component={Demos} />

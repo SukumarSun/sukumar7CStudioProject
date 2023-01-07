@@ -8,7 +8,7 @@ const Customers = () => (
     <div className="bottom">
       <SideBar />
       <div className="bottom-right">
-        <h1>Customers</h1>
+        <h1 className="custom">Customers</h1>
       </div>
     </div>
   </div>

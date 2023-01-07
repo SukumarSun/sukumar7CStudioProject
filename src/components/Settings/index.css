@@ -1,31 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
 .bottom {
   display: flex;
+  width: 100%;
+}
+
+#icon1 {
+  color: white;
 }
 
 .bottom-right {
   flex-grow: 1;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
+  border-right: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
+.side {
+  width: 200px;
+}
+
 .settings {
-  min-width: 100vw;
+  width: 100%;
+  /* border: 12px solid brown; */
+}
+
+.settings-page {
+  /* border: 2px solid blue; */
+  padding: 15px;
+  padding-left: 55px;
 }
 
 table {
-  width: 800px;
+  width: 700px;
   /* height: 200px; */
   border-collapse: collapse;
 }
 
+@media screen and (min-width: 577px) {
+  table {
+    width: 400px;
+    font-size: 10px;
+  }
+
+  .settings-page {
+    padding: 0px;
+    margin-left: 40px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  table {
+    width: 500px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  table {
+    width: 750px;
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 576px) {
   table {
-    width: 220px;
-    height: 150px;
-    font-size: 8px;
+    width: 350px;
+    font-size: 10px;
+  }
+
+  .settings-page {
+    padding: 0px;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  table {
+    width: 270px;
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  table {
+    width: 180px;
+    font-size: 9px;
+  }
+
+  .settings-page {
+    padding: 0px;
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  table {
+    width: 140px;
+    font-size: 7spx;
   }
 }
 
@@ -42,12 +119,11 @@ td {
 }
 
 .table-section {
-  min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0px auto;
-  padding: 20px;
+  margin-left: 0px;
+  /* border: 2px solid red; */
 }
 
 .modal-container {
@@ -70,8 +146,8 @@ td {
 .popup-container {
   display: flex;
   border: 2px solid black;
-  width: 500px;
-  height: 300px;
+  width: 550px;
+  height: 320px;
 }
 
 .left-container {
@@ -94,6 +170,10 @@ td {
 .button-container {
   display: flex;
   margin-top: 15px;
+}
+
+.onAdd-btn {
+  cursor: pointer;
 }
 
 .logo {
@@ -131,6 +211,7 @@ td {
   margin: 10px;
   height: 25px;
   border: none;
+  cursor: pointer;
   font-size: 12px;
 }
 
@@ -167,9 +248,9 @@ td {
   }
 
   .logo {
-    width: 60px;
-    height: 40px;
-    margin: 5px;
+    width: 150px;
+    border: 2px solid green;
+    height: 150px;
   }
 
   .email-input {
@@ -181,22 +262,23 @@ td {
     font-size: 8px;
   }
 }
-
+/* 
 .settings-page {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .add-user {
-  margin: 20px;
-  width: 80px;
+  margin: 20px 0px 25px 7px;
+  height: 25px;
+  width: 120px;
   padding: 3px;
   color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   font-size: 10px;
   font-weight: bold;
   cursor: pointer;
-  background-color: darkolivegreen;
+  background-color: rgb(122, 161, 54);
 }
 
 .add-user:hover {
@@ -214,13 +296,16 @@ td {
 
 @media screen and (max-width: 576px) {
   .add-user {
-    margin: 10px 20px;
-    width: 50px;
-    padding: 2px;
-    color: white;
-    border-radius: 8px;
+    height: 20px;
+    width: 80px;
+    margin: 10px 0px 15px 7px;
     font-size: 8px;
-    background-color: darkolivegreen;
+    background-color: rgb(122, 161, 54);
+  }
+
+  .settings-page {
+    padding: 0px;
+    margin-left: 15px;
   }
 }
 
@@ -248,7 +333,7 @@ td {
 .pagination {
   display: flex;
   width: 100%;
-  font-size: 12px;
+  font-size: 9px;
   font-weight: bold;
   cursor: pointer;
   /* border: 2px solid blue; */
@@ -257,4 +342,8 @@ td {
 
 .each {
   margin-right: 10px;
+}
+
+.each:hover {
+  color: rgba(255, 7, 7, 0.795);
 }

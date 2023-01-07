@@ -1,5 +1,8 @@
 import {useState, useEffect} from 'react'
+import {AiOutlineUserAdd} from 'react-icons/ai'
+
 import Popup from 'reactjs-popup'
+// eslint-disable-next-line no-unused-vars
 import {v4} from 'uuid'
 
 // eslint-disable-next-line no-unused-vars
@@ -21,6 +24,8 @@ const getLocalItems = () => {
 
 const Settings = () => {
   //   const [count, updateCount] = useState(0)
+  // eslint-disable-next-line no-unused-vars
+  const [sNo, setsNo] = useState(1)
   const [toggle, setToggle] = useState(false)
   const [emailInput, updateEmail] = useState('')
   const [roleInput, updateRole] = useState('Admin')
@@ -39,9 +44,15 @@ const Settings = () => {
     updateEmail(event.target.value)
   }
 
+  const datenow = new Date()
+
   const onAdd = () => {
+    // setsNo(prev => prev + 1)
+
     const newUser = {
+      serial: inputList.length + 1,
       id: v4(),
+      dt: new Date(),
       emailInput,
       roleInput,
     }
@@ -50,6 +61,7 @@ const Settings = () => {
     updateEmail('')
     updateRole('')
   }
+  console.log(inputList)
 
   const onDelete = id => {
     const resultList = inputList.filter(each => each.id !== id)
@@ -60,7 +72,7 @@ const Settings = () => {
     <div className="settings">
       <Header />
       <div className="bottom">
-        <SideBar />
+        <SideBar className="side" />
         <div className="settings-page">
           <Popup
             modal
@@ -79,11 +91,14 @@ const Settings = () => {
               <div className="modal-container">
                 <div className="popup-container">
                   <div className="left-container">
-                    <img
+                    <p>
+                      <AiOutlineUserAdd id="icon1" size={100} />
+                    </p>
+                    {/* <img
                       className="logo"
                       alt="logo"
                       src="https://res.cloudinary.com/dsvdiwazh/image/upload/v1669217903/Standard_Collection_8_jm9itc.png"
-                    />
+                    /> */}
                     <p>
                       Lorem Ipsum is simply dummy text of the printing and
                       typesetting industry. Lorem Ipsum has been the industrys
@@ -92,7 +107,7 @@ const Settings = () => {
                       type specimen book.
                     </p>
                   </div>
-                  <div className="right-container">
+                  <form onSubmit={onAdd} className="right-container">
                     <h1 className="user-head">User Information</h1>
                     <div className="email">
                       <label className="input-head" htmlFor="email">
@@ -132,13 +147,14 @@ const Settings = () => {
                       </button>
                       <button
                         className="cancel-button add"
-                        type="button"
-                        onClick={onAdd}
+                        type="submit"
+
+                        // onClick={onAdd}
                       >
                         Add
                       </button>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             )}
@@ -147,7 +163,7 @@ const Settings = () => {
             <table>
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>S.no</th>
                   <th>User</th>
                   <th>Last Signed In</th>
                   <th>Role</th>
@@ -160,17 +176,18 @@ const Settings = () => {
                     inputList={inputList}
                     key={eachComment.id}
                     onDelete={onDelete}
+                    datenow={datenow}
                     commentDetails={eachComment}
                   />
                 ))}
               </tbody>
             </table>
-            <div className="pagination">
+            {/* <div className="pagination">
               <p className="each">Previous</p>
               <p className="each">1</p>
               <p className="each">2</p>
               <p className="each">Next</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

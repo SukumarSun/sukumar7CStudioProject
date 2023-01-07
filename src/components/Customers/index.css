@@ -1,0 +1,16 @@
+@media screen and (max-width: 750px) {
+  .custom {
+    font-size: 20px;
+  }
+}
+
+.bottom-now {
+  display: flex;
+}
+
+.bottom-now-right {
+  flex-grow: 1;
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+}
